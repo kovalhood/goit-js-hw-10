@@ -31,7 +31,3 @@
 .country-info__text:not(:last-child) {
   margin-bottom: 10px;
 }
-
-.country-info__text--title {
-  font-weight: bold;
-}
