@@ -22,14 +22,18 @@ function onInput(event) {
     const searchQuery = event.target.value.trim();
 
     if (searchQuery === "") {
-        refs.countryList.innerHTML = "";
-        refs.countryInformation.innerHTML = "";
+        clearAll();
         return;
     };
 
     API.fetchCountries(searchQuery)
         .then(countryList)
         .catch(noSuchCountry)
+}
+
+function clearAll() {
+    refs.countryList.innerHTML = "";
+    refs.countryInformation.innerHTML = "";
 }
 
 function countryList(countries) {
